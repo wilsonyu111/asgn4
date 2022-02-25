@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>asgn4</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="asgn2" width="800" height="800">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <div class="normal control">
+      <button type="button" id = "normal_on" onclick="normalOnOff(true)">normal on</button>
+      <button type="button" id = "normal_off" onclick="normalOnOff(false)">normal off</button>
+      <button type="button" id = "light_on" onclick="lightOnOff(1)">light on</button>
+      <button type="button" id = "light_off" onclick="lightOnOff(0)">light off</button>
+    </div>
+
+    <h3>light control</h3>
+    <button type="button" id = "moving_light" onclick="movingLightOn()">moving light</button>
+    <button type="button" id = "spotlight" onclick="spotlightOn()">spotlight</button>
+    <div style="display: flex;">
+      <h4>light x</h4> <input type="range" min="-50" max="50" value="21" id="light_x">
+      <h4>light y</h4> <input type="range" min="-50" max="50" value="20" id="light_y">
+      <h4>light z</h4> <input type="range" min="-50" max="50" value="20" id="light_z">
+      <h4>spotlight limit</h4> <input type="range" min="0" max="180" value="90" id="spotlight_limit">
+    </div>
+
+    <!-- <div class="shapes" style="display: flex;">
+      <h4>camera angle </h4> <input type="range" min="0" max="360" value="0" id="camera_angle">
+    </div> -->
+
+
+    <br>
+    <div class="motion_control">
+        <!-- <div class="motion control" style="display: flex;">
+          <h4>Leg</h4> <input type="range" min="-30" max="30" value="0" id="leg">
+          <h4>arm and hand</h4> <input type="range" min="-50" max="50" value="0" id="arm">
+          <h4>left feet</h4> <input type="range" min="-35" max="35" value="0" id="Lfeet">
+          <h4>right feet</h4> <input type="range" min="-35" max="35" value="0" id="Rfeet">
+        </div> -->
+        <div class="controls" style="display: flex; flex-direction: column;">
+          <h4>movement control: </h4>
+          <h4>w = forward, s = backward, a = left, d = right </h4>
+          <h4>camera movement control: </h4>
+          <h4>q = pan left, e = pan right, or drag left and right on canvas </h4>
+          <h4>other controls:</h4>
+          <h4>c = remove blocks</h4>
+          
+        </div>
+
+    </div>
+
+    <div class="color">
+      <div class="lighting color">
+        <h3>ambient color</h3>
+        <div style="display: flex;">
+          <h4>red</h4> <input type="range" min="0" max="100" value="100" id="ambient_red">
+          <h4>green</h4> <input type="range" min="0" max="100" value="100" id="ambient_green">
+          <h4>blue</h4> <input type="range" min="0" max="100" value="100" id="ambient_blue">
+        </div>
+        
+        <h3>diffuse color</h3>
+        <div style="display: flex;">
+          <h4>red</h4> <input type="range" min="0" max="100" value="100" id="diffuse_red">
+          <h4>green</h4> <input type="range" min="0" max="100" value="100" id="diffuse_green">
+          <h4>blue</h4> <input type="range" min="0" max="100" value="100" id="diffuse_blue">
+        </div>
+
+        <!-- <h3>leg color</h3>
+        <div style="display: flex;">
+          <h4>red</h4> <input type="range" min="0" max="100" value="39" id="leg_red">
+          <h4>green</h4> <input type="range" min="0" max="100" value="20" id="leg_green">
+          <h4>blue</h4> <input type="range" min="0" max="100" value="18" id="leg_blue">
+        </div>
+
+        <h3>feet color</h3>
+        <div style="display: flex;">
+          <h4>red</h4> <input type="range" min="0" max="100" value="60" id="feet_red">
+          <h4>green</h4> <input type="range" min="0" max="100" value="30" id="feet_green">
+          <h4>blue</h4> <input type="range" min="0" max="100" value="29" id="feet_blue">
+        </div> -->
+
+      </div>
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="asgn4.js"></script>
+    <script src="Animal.js"></script>
+    <script src="camera_movement.js"></script>
+    <script src="vec.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Square.js"></script>
+    <script src="Cube.js"></script>
+    <script src="3dTriangle.js"></script>
+    <script src="Sphere.js"></script>
+    <script src="RenderEnvironment.js"></script>
+    <script src="animation-control.js"></script>
+    <script src="textures.js"></script>
+  </body>
+</html>
